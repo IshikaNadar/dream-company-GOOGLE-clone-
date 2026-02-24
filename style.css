@@ -1,0 +1,270 @@
+/* --- RESET & BASIC SETUP --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #202124;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- HEADER / NAVIGATION --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+.logo-container {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* Google Logo Colors */
+.g-blue { color: #4285F4; }
+.g-red { color: #EA4335; }
+.g-yellow { color: #FBBC05; }
+.g-green { color: #34A853; }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    font-size: 13px;
+    color: #202124;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* App Grid Icon */
+.app-icon {
+    display: grid;
+    grid-template-columns: repeat(3, 4px);
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.app-icon:hover {
+    background-color: #f1f3f4;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #5f6368;
+    border-radius: 50%;
+}
+
+/* Profile Avatar */
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.hero h1 span:hover {
+    transform: scale(1.1);
+}
+
+.hero p {
+    font-size: 24px;
+    color: #5f6368;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #1557b0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* --- CONTENT GRID --- */
+.info-section {
+    padding: 60px 10%;
+    background-color: #f8f9fa;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #202124;
+}
+
+.card p {
+    color: #5f6368;
+    font-size: 14px;
+}
+
+/* --- STATS SECTION --- */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 48px;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    color: #5f6368;
+    font-size: 16px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #f2f2f2;
+    padding: 40px 30px;
+    font-size: 14px;
+    color: #70757a;
+}
+
+.footer-top {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dadce0;
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #202124;
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .stats-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+    }
+    
+    .nav-links .nav-item {
+        display: none;
+    }
+}
